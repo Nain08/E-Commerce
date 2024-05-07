@@ -46,9 +46,11 @@ const destroyData=async()=>{
         process.exit(1);
     }
 }
+// If argument is '-d', destroy data
 if(process.argv[2]==='-d'){
     destroyData();
 }
+ // Otherwise, import data
 else{
     importData();
 }
