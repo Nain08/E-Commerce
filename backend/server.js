@@ -28,9 +28,9 @@ app.use(express.urlencoded({extended:true}))
 app.use(cookieParser());
 
 // console.log(products)
-app.get('/',(req,res)=>{
-    res.send('API is running')
-})
+// app.get('/',(req,res)=>{
+//     res.send('API is running')
+// })
 
 // Use the product routes defined in productRoutes.js for requests to /api/products
 app.use('/api/products',productRoutes)
