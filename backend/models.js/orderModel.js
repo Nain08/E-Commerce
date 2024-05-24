@@ -91,12 +91,13 @@ const orderSchema=mongoose.Schema({
         required:true,
         default:false
     },
+    
     paidAt:{
-        type:Date
+        type:Date,
+        // required:true,
     },
-    paidAt:{
+    isDelivered:{
         type:Boolean,
-        required:true,
         default:false
     },
     deliveredAt:{
