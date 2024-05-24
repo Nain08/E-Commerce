@@ -7,7 +7,7 @@ import Message from './Message'
 const ProductCaraousel = () => {
     const {data:products,isLoading,error}=useGetTopProductsQuery()
 
-  return isLoading?<Loader />:error?<Message variant='danger'>{error?.data?.message}</Message>:(
+  return isLoading?<Loader />:error?<Message variant='danger'>{error?.data?.message || error.error}</Message>:(
     <Carousel pause='hover' className='bg-primary mb-4'>
         {products.map((product)=>(
             <Carousel.Item key={product._id}>
